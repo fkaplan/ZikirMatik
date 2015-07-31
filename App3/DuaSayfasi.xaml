@@ -38,7 +38,7 @@
                Height="170" Width="150" Margin="25,400,0,0" VerticalAlignment="Top" />
         <TextBlock Name="txtDuaSayisi" TextWrapping="Wrap" TextAlignment="Center" FontSize="40" Height="65" Margin="75,428,225,147"/>
 
-        <Button Name="Arttır" Click="arttır_Click" BorderThickness="0" Width="170" Height="170" Margin="185,435,0,22" >
+        <Button Name="Arttır" Click="arttır_Click" BorderThickness="0" Width="170" Height="170" Margin="185,435,0,22" ClickMode="Press" Style="{StaticResource ButtonStyle1}" >
             <Image Source="Assets/zikirbuttonyeni.png" Stretch="Fill" Width="152" Height="152"/>
         </Button>
 
