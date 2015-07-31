@@ -106,13 +106,15 @@ namespace App3
             {
                 //txtDuaSayaci.Text = user.kacKezOkundu.ToString();
                 txtDuaSayisi.Text = user.kacKezOkundu.ToString();
+
+                if (Int32.Parse(txtDuaSayisi.Text) == Int32.Parse(sayac.kacKezOkunmali.ToString()))
+                {
+                    VibrationDevice testVibration = VibrationDevice.GetDefault();
+                    testVibration.Vibrate(TimeSpan.FromSeconds(2));
+                }
             }
 
-            if (Int32.Parse(txtDuaSayisi.Text) == 10)
-            {
-                VibrationDevice testVibration = VibrationDevice.GetDefault();
-                testVibration.Vibrate(TimeSpan.FromSeconds(2));
-            }
+            
            
         }
 
