@@ -18,6 +18,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using Windows.Phone.Devices.Notification;
+
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
 namespace App3
@@ -104,8 +106,13 @@ namespace App3
             {
                 //txtDuaSayaci.Text = user.kacKezOkundu.ToString();
                 txtDuaSayisi.Text = user.kacKezOkundu.ToString();
-            }     
-     
+            }
+
+            if (Int32.Parse(txtDuaSayisi.Text) == 10)
+            {
+                VibrationDevice testVibration = VibrationDevice.GetDefault();
+                testVibration.Vibrate(TimeSpan.FromSeconds(2));
+            }
            
         }
 
