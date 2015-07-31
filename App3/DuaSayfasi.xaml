@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="App3.DuaSayfasi"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/zikirmatikbackground.png"/>
+        </Grid.Background>
+        <ListView x:Name="Duaİcerik" Margin="10,234,10,253">
+            <ListView.Background>
+                <SolidColorBrush Color="#FFAFDCEC" Opacity="0.75"/>
+            </ListView.Background>
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <Border>
+                        <StackPanel>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Dua}" TextWrapping="Wrap" FontSize="20" Width="360" TextAlignment="Center" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Hedef : " FontSize="20" TextAlignment="Left" />
+                                <TextBlock Text="{Binding kacKezOkunmali}" FontSize="20" Width="450" TextAlignment="Left"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Image Source="Assets/cerceve4.png" HorizontalAlignment="Left" 
+               Height="170" Width="150" Margin="25,400,0,0" VerticalAlignment="Top" />
+        <TextBlock Name="txtDuaSayisi" TextWrapping="Wrap" TextAlignment="Center" FontSize="40" Height="65" Margin="75,428,225,147"/>
+
+        <Button Name="Arttır" Click="arttır_Click" BorderThickness="0" Width="170" Height="170" Margin="185,435,0,22" >
+            <Image Source="Assets/zikirbuttonyeni.png" Stretch="Fill" Width="152" Height="152"/>
+        </Button>
+
+        <!-- <TextBlock Name="txtDuaSayaci" Text="+" FontSize="40" TextAlignment="Center" Margin="231,510,131,90"/> -->
+
+        <Button Content="Sıfırla" Click="sifirla_Click" BorderThickness="0" Margin="286,578,0,4" Height="29" Width="114" />
+        <Button Content="Güncelle" Click="guncelle_Click" BorderThickness="0" Margin="0,578,0,0" Height="29" Width="114" />
+    </Grid>
+</Page>

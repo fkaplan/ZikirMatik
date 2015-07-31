@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="App3.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/zikirmatikbackground.png"/>
+        </Grid.Background>
+
+        <Pivot x:Name="dualarBolumu" Grid.ColumnSpan="2" Margin="0,0,0,-0.333">
+            <PivotItem Header="Dualar" Margin="0,23,0,-0.667">
+
+                <ListView x:Name="DuaListesi" Grid.Row="1" Margin="0,96,-0.333,4.833" Width="400" SelectionChanged="DuaListesi_SelectionChanged">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderBrush="#FF82CAFF" BorderThickness="1,3,1,5">
+                                <StackPanel Margin="10" >
+                                    <StackPanel HorizontalAlignment="Stretch">
+                                        <TextBlock Text="{Binding DuaName}" HorizontalAlignment="Left"  Width="460" FontSize="20"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Hedef : "   FontSize="20" HorizontalAlignment="Center"/>
+                                        <TextBlock Text="{Binding kacKezOkunmali}" FontSize="20"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </PivotItem>
+
+            <PivotItem Header="Zikirmatik" Margin="0,120,0,0" Height="372" VerticalAlignment="Top">
+                <Grid x:Name="ZikirmatikSayaci">
+                    <Image Source="Assets/cerceve4.png" HorizontalAlignment="Left" 
+                            Height="170" Width="150" Margin="40,50,0,0" VerticalAlignment="Top" />
+                    <TextBlock Name="Sayac" Text="0" FontSize="40" TextAlignment="Center" Height="60" Margin="91,80,225,228"/>
+
+                    <Button Name="Arttır" Click="arttır_Click" BorderThickness="0" Width="170" Height="170" Margin="190,100,0,52" >
+                        <Image Source="Assets/zikirbuttonyeni.png" Stretch="Fill" Width="152" Height="152"/>
+                    </Button>
+
+                    <Button Content="Sıfırla" Click="sifirla_Click" BorderThickness="0" Margin="280,300,0,4" Height="29" Width="114" />
+                </Grid>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar Background="#FF2A7DAD">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Icon="Add" Label="Dua Ekle" Click="DuaEkle_Click"/>
+                <AppBarButton Icon="OutlineStar" Label="Değerlendir" Click="rateButton_Click"/>
+            </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="Hakkında" Click="hakkinda_Click" />
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
