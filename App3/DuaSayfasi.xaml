@@ -22,11 +22,11 @@
                     <Border>
                         <StackPanel>
                             <StackPanel>
-                                <TextBlock Text="{Binding Dua}" TextWrapping="Wrap" FontSize="20" Width="360" TextAlignment="Center" />
+                                <TextBlock Text="{Binding Dua}" TextWrapping="Wrap" Foreground="White" FontSize="20" Width="360" TextAlignment="Center" />
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Hedef : " FontSize="20" TextAlignment="Left" />
-                                <TextBlock Text="{Binding kacKezOkunmali}" FontSize="20" Width="450" TextAlignment="Left"/>
+                                <TextBlock Text="Hedef : " FontSize="20" Foreground="White" TextAlignment="Left" />
+                                <TextBlock Text="{Binding kacKezOkunmali}" Foreground="White" FontSize="20" Width="450" TextAlignment="Left"/>
                             </StackPanel>
                         </StackPanel>
                     </Border>
@@ -36,7 +36,7 @@
 
         <Image Source="Assets/cerceve4.png" HorizontalAlignment="Left" 
                Height="170" Width="150" Margin="25,400,0,0" VerticalAlignment="Top" />
-        <TextBlock Name="txtDuaSayisi" TextWrapping="Wrap" TextAlignment="Center" FontSize="40" Height="65" Margin="75,428,225,147"/>
+        <TextBlock Name="txtDuaSayisi" TextWrapping="Wrap" Foreground="White" TextAlignment="Center" FontSize="40" Height="65" Margin="75,428,225,147"/>
 
         <Button Name="Arttır" Click="arttır_Click" BorderThickness="0" Width="170" Height="170" Margin="185,435,0,22" ClickMode="Press" Style="{StaticResource ButtonStyle1}" >
             <Image Source="Assets/zikirbuttonyeni.png" Stretch="Fill" Width="152" Height="152"/>
@@ -44,7 +44,7 @@
 
         <!-- <TextBlock Name="txtDuaSayaci" Text="+" FontSize="40" TextAlignment="Center" Margin="231,510,131,90"/> -->
 
-        <Button Content="Sıfırla" Click="sifirla_Click" BorderThickness="0" Margin="286,578,0,4" Height="29" Width="114" />
-        <Button Content="Güncelle" Click="guncelle_Click" BorderThickness="0" Margin="0,578,0,0" Height="29" Width="114" />
+        <Button Content="Sıfırla" Click="sifirla_Click" Foreground="White" BorderThickness="0" Margin="286,578,0,4" Height="29" Width="114" />
+        <Button Content="Güncelle" Click="guncelle_Click" Foreground="White" BorderThickness="0" Margin="0,578,0,0" Height="29" Width="114" />
     </Grid>
 </Page>
