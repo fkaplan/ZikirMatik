@@ -8,73 +8,73 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 	<Page.Resources>
-		<Style x:Key="ButtonStyle2" TargetType="Button">
-			<Setter Property="Background" Value="Transparent"/>
-			<Setter Property="BorderBrush" Value="{ThemeResource PhoneForegroundBrush}"/>
-			<Setter Property="Foreground" Value="{ThemeResource PhoneForegroundBrush}"/>
-			<Setter Property="BorderThickness" Value="{ThemeResource PhoneBorderThickness}"/>
-			<Setter Property="FontFamily" Value="{ThemeResource PhoneFontFamilyNormal}"/>
-			<Setter Property="FontWeight" Value="{ThemeResource PhoneButtonFontWeight}"/>
-			<Setter Property="FontSize" Value="{ThemeResource TextStyleLargeFontSize}"/>
-			<Setter Property="Padding" Value="{ThemeResource PhoneButtonContentPadding}"/>
-			<Setter Property="MinHeight" Value="{ThemeResource PhoneButtonMinHeight}"/>
-			<Setter Property="MinWidth" Value="{ThemeResource PhoneButtonMinWidth}"/>
-			<Setter Property="HorizontalAlignment" Value="Left"/>
-			<Setter Property="VerticalAlignment" Value="Center"/>
-			<Setter Property="Template">
-				<Setter.Value>
-					<ControlTemplate TargetType="Button">
-						<Grid x:Name="Grid" Background="Transparent">
-							<VisualStateManager.VisualStateGroups>
-								<VisualStateGroup x:Name="CommonStates">
-									<VisualStateGroup.Transitions>
-										<VisualTransition From="PointerOver" To="Normal">
-											<Storyboard>
-												<PointerUpThemeAnimation Storyboard.TargetName="Grid"/>
-											</Storyboard>
-										</VisualTransition>
-									</VisualStateGroup.Transitions>
-									<VisualState x:Name="Normal"/>
-									<VisualState x:Name="PointerOver"/>
-									<VisualState x:Name="Pressed">
-										<Storyboard>
-											<PointerDownThemeAnimation Storyboard.TargetName="Grid"/>
-											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
-												<DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPressedForegroundThemeBrush}"/>
-											</ObjectAnimationUsingKeyFrames>
-											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="Border">
-												<DiscreteObjectKeyFrame KeyTime="0">
-													<DiscreteObjectKeyFrame.Value>
-														<ImageBrush Stretch="Fill"/>
-													</DiscreteObjectKeyFrame.Value>
-												</DiscreteObjectKeyFrame>
-											</ObjectAnimationUsingKeyFrames>
-										</Storyboard>
-									</VisualState>
-									<VisualState x:Name="Disabled">
-										<Storyboard>
-											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
-												<DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonDisabledForegroundThemeBrush}"/>
-											</ObjectAnimationUsingKeyFrames>
-											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="Border">
-												<DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonDisabledBorderThemeBrush}"/>
-											</ObjectAnimationUsingKeyFrames>
-											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="Border">
-												<DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonDisabledBackgroundThemeBrush}"/>
-											</ObjectAnimationUsingKeyFrames>
-										</Storyboard>
-									</VisualState>
-								</VisualStateGroup>
-							</VisualStateManager.VisualStateGroups>
-							<Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Margin="{ThemeResource PhoneTouchTargetOverhang}">
-								<ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-							</Border>
-						</Grid>
-					</ControlTemplate>
-				</Setter.Value>
-			</Setter>
-		</Style>
-	</Page.Resources>
+        <Style x:Key="ButtonStyle2" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="{ThemeResource PhoneForegroundBrush}"/>
+            <Setter Property="Foreground" Value="{ThemeResource PhoneForegroundBrush}"/>
+            <Setter Property="BorderThickness" Value="{ThemeResource PhoneBorderThickness}"/>
+            <Setter Property="FontFamily" Value="{ThemeResource PhoneFontFamilyNormal}"/>
+            <Setter Property="FontWeight" Value="{ThemeResource PhoneButtonFontWeight}"/>
+            <Setter Property="FontSize" Value="{ThemeResource TextStyleLargeFontSize}"/>
+            <Setter Property="Padding" Value="{ThemeResource PhoneButtonContentPadding}"/>
+            <Setter Property="MinHeight" Value="{ThemeResource PhoneButtonMinHeight}"/>
+            <Setter Property="MinWidth" Value="{ThemeResource PhoneButtonMinWidth}"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="Grid" Background="Transparent">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualStateGroup.Transitions>
+                                        <VisualTransition From="PointerOver" To="Normal">
+                                            <Storyboard>
+                                                <PointerUpThemeAnimation Storyboard.TargetName="Grid"/>
+                                            </Storyboard>
+                                        </VisualTransition>
+                                    </VisualStateGroup.Transitions>
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="PointerOver"/>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <PointerDownThemeAnimation Storyboard.TargetName="Grid"/>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPressedForegroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="Border">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <ImageBrush Stretch="Fill"/>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonDisabledForegroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="Border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonDisabledBorderThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="Border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonDisabledBackgroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Margin="{ThemeResource PhoneTouchTargetOverhang}">
+                                <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
 
     <Grid x:Name="LayoutRoot">
 
@@ -91,11 +91,11 @@
                             <Border BorderBrush="#FF82CAFF" BorderThickness="1,3,1,5">
                                 <StackPanel Margin="10" >
                                     <StackPanel HorizontalAlignment="Stretch">
-                                        <TextBlock Text="{Binding DuaName}" HorizontalAlignment="Left"  Width="460" FontSize="20"/>
+                                        <TextBlock Text="{Binding DuaName}" Foreground="White" HorizontalAlignment="Left"  Width="460" FontSize="20"/>
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Hedef : "   FontSize="20" HorizontalAlignment="Center"/>
-                                        <TextBlock Text="{Binding kacKezOkunmali}" FontSize="20"/>
+                                        <TextBlock Text="Hedef : " Foreground="White" FontSize="20" HorizontalAlignment="Center"/>
+                                        <TextBlock Text="{Binding kacKezOkunmali}" Foreground="White" FontSize="20"/>
                                     </StackPanel>
                                 </StackPanel>
                             </Border>
@@ -108,13 +108,13 @@
                 <Grid x:Name="ZikirmatikSayaci">
                     <Image Source="Assets/cerceve4.png" HorizontalAlignment="Left" 
                             Height="170" Width="150" Margin="40,50,0,0" VerticalAlignment="Top" />
-                    <TextBlock Name="Sayac" Text="0" FontSize="40" TextAlignment="Center" Height="60" Margin="91,80,225,228"/>
+                    <TextBlock Name="Sayac" Text="0" Foreground="White" FontSize="40" TextAlignment="Center" Height="60" Margin="91,80,225,228"/>
 
                     <Button Name="Arttır" Click="arttır_Click" BorderThickness="0" Width="170" Height="170" Margin="190,100,0,52" Style="{StaticResource ButtonStyle2}" >
                         <Image Source="Assets/zikirbuttonyeni.png" Stretch="Fill" Width="152" Height="152"/>
                     </Button>
 
-                    <Button Content="Sıfırla" Click="sifirla_Click" BorderThickness="0" Margin="280,300,0,4" Height="29" Width="114" />
+                    <Button Content="Sıfırla" Click="sifirla_Click" Foreground="White" BorderThickness="0" Margin="280,300,0,4" Height="29" Width="114" Style="{StaticResource ButtonStyle1}" />
                 </Grid>
             </PivotItem>
         </Pivot>
@@ -122,11 +122,11 @@
     <Page.BottomAppBar>
         <CommandBar Background="#FF2A7DAD">
             <CommandBar.PrimaryCommands>
-                <AppBarButton Icon="Add" Label="Dua Ekle" Click="DuaEkle_Click"/>
-                <AppBarButton Icon="OutlineStar" Label="Değerlendir" Click="rateButton_Click"/>
+                <AppBarButton Icon="Add" Label="Dua Ekle" Click="DuaEkle_Click" Foreground="White" BorderBrush="White"/>
+                <AppBarButton Icon="OutlineStar" Label="Değerlendir" Click="rateButton_Click" Foreground="White" BorderBrush="White"/>
             </CommandBar.PrimaryCommands>
             <CommandBar.SecondaryCommands>
-                <AppBarButton Label="Hakkında" Click="hakkinda_Click" />
+                <AppBarButton Label="Hakkında" Click="hakkinda_Click" Foreground="White"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
     </Page.BottomAppBar>

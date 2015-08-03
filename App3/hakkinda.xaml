@@ -10,12 +10,12 @@
 
     <Grid x:Name="LayoutRoot" Background="#FF07182E">
         <StackPanel>
-            <TextBlock Text="Zikirmatik Ekstra" TextAlignment="Center" FontSize="24" Margin="10,30,0,0"/>
-            <TextBlock Text="Uygulama Sahibi : Furkan Kaplan" FontSize="20" Margin="10,50,0,0" />
-            <TextBlock Text="Mail Adresi : furkan.kaplan@gmail.com" FontSize="20" Margin="10,0,0,0" />
-            <TextBlock Text="Version : 1.0.0.0" FontSize="20" Margin="10,0,0,0"/>
+            <TextBlock Text="Zikirmatik Ekstra" TextAlignment="Center" Foreground="White" FontSize="24" Margin="10,30,0,0"/>
+            <TextBlock Text="Uygulama Sahibi : Furkan Kaplan" FontSize="20" Foreground="White" Margin="10,50,0,0" />
+            <TextBlock Text="Mail Adresi : furkan.kaplan@gmail.com" FontSize="20" Foreground="White" Margin="10,0,0,0" />
+            <TextBlock Text="Version : 1.0.0.0" FontSize="20" Foreground="White" Margin="10,0,0,0"/>
             <TextBlock/>
-            <TextBlock TextWrapping="Wrap" TextAlignment="Justify" FontSize="18" Text="     Uygulama ile ilgili tüm eleştiri ve isteklerinizi markete yazacağınız yorumlarda ya da mail yoluyla bana iletebilirsiniz." Margin="0,0,10,0" />
+            <TextBlock TextWrapping="Wrap" Foreground="White" TextAlignment="Justify" FontSize="18" Text="     Uygulama ile ilgili tüm eleştiri ve isteklerinizi markete yazacağınız yorumlarda ya da mail yoluyla bana iletebilirsiniz." Margin="0,0,10,0" />
              
         </StackPanel>
     </Grid>

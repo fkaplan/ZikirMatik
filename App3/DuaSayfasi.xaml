@@ -7,6 +7,34 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+	<Page.Resources>
+		<ControlTemplate x:Key="ButtonControlTemplate1" TargetType="Button">
+			<Grid x:Name="grid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="9*"/>
+                    <ColumnDefinition Width="10*"/>
+                </Grid.ColumnDefinitions>
+                <VisualStateManager.VisualStateGroups>
+					<VisualStateGroup x:Name="CommonStates">
+						<VisualState x:Name="Normal"/>
+						<VisualState x:Name="Pressed">
+							<Storyboard>
+								<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background)" Storyboard.TargetName="grid">
+									<DiscreteObjectKeyFrame KeyTime="0">
+										<DiscreteObjectKeyFrame.Value>
+											<ImageBrush Stretch="Fill"/>
+										</DiscreteObjectKeyFrame.Value>
+									</DiscreteObjectKeyFrame>
+								</ObjectAnimationUsingKeyFrames>
+							</Storyboard>
+						</VisualState>
+						<VisualState x:Name="Disabled"/>
+						<VisualState x:Name="PointerOver"/>
+					</VisualStateGroup>
+				</VisualStateManager.VisualStateGroups>
+			</Grid>
+		</ControlTemplate>
+	</Page.Resources>
 
     <Grid x:Name="LayoutRoot">
 
@@ -44,7 +72,7 @@
 
         <!-- <TextBlock Name="txtDuaSayaci" Text="+" FontSize="40" TextAlignment="Center" Margin="231,510,131,90"/> -->
 
-        <Button Content="Sıfırla" Click="sifirla_Click" Foreground="White" BorderThickness="0" Margin="286,578,0,4" Height="29" Width="114" />
-        <Button Content="Güncelle" Click="guncelle_Click" Foreground="White" BorderThickness="0" Margin="0,578,0,0" Height="29" Width="114" />
+        <Button Content="Sıfırla" Click="sifirla_Click" Foreground="White" BorderThickness="0" Margin="286,578,0,4" Height="29" Width="114" Style="{StaticResource ButtonStyle1}" />
+        <Button Content="Güncelle" Click="guncelle_Click" Foreground="White" BorderThickness="0" Margin="0,578,0,0" Height="29" Width="114" Style="{StaticResource ButtonStyle1}"/>
     </Grid>
 </Page>
