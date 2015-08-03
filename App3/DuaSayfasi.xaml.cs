@@ -107,7 +107,9 @@ namespace App3
                 //txtDuaSayaci.Text = user.kacKezOkundu.ToString();
                 txtDuaSayisi.Text = user.kacKezOkundu.ToString();
 
-                if (Int32.Parse(txtDuaSayisi.Text) == Int32.Parse(sayac.kacKezOkunmali.ToString()))
+
+                //Eğer titreşim modu aktifse hedefe ulaşıldığında telefon titresin
+                if (Int32.Parse(txtDuaSayisi.Text) == Int32.Parse(sayac.kacKezOkunmali.ToString()) && ToggleTitresim.IsOn == true)
                 {
                     VibrationDevice testVibration = VibrationDevice.GetDefault();
                     testVibration.Vibrate(TimeSpan.FromSeconds(2));
@@ -120,6 +122,7 @@ namespace App3
 
         private async void sifirla_Click(object sender, RoutedEventArgs e)
         {
+            // SayfaID'sinden dualistesinde istenen duayı bul, kacKezOkundu değerini sıfırla
             SQLiteAsyncConnection conn = new SQLiteAsyncConnection("duaDB.db");
             var sayac = await conn.Table<Dualar>().Where(x => x.Id == sayfaID).FirstOrDefaultAsync();
             if (sayac != null)
