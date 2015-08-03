@@ -12,13 +12,13 @@
         <Grid.Background>
             <ImageBrush ImageSource="Assets/zikirmatikbackground.png"/>
         </Grid.Background>
-        <TextBox Name="TxtDuaName" PlaceholderText="Duanın Adı" HorizontalAlignment="Left" Margin="10,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="380"/>
-        <TextBox Name="TxtDua" PlaceholderText="Dua"  HorizontalAlignment="Left" Margin="10,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Height="86"/>
-        <TextBox Name="TxtZikirSayisi" PlaceholderText="Zikir Sayısı" HorizontalAlignment="Left" 
+        <TextBox Name="TxtDuaName" PlaceholderText="Duanın Adı" Background="#FFAFDCEC" Foreground="Black" HorizontalAlignment="Left" Margin="10,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="380"/>
+        <TextBox Name="TxtDua" PlaceholderText="Dua" Background="#FFAFDCEC" Foreground="Black" HorizontalAlignment="Left" Margin="10,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Height="86"/>
+        <TextBox Name="TxtZikirSayisi" PlaceholderText="Zikir Sayısı" Background="#FFAFDCEC" Foreground="Black" HorizontalAlignment="Left" 
                  Margin="276,400,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"
                  InputScope="Number"/>
         
-        <Button Content="Kaydet" Click="Kaydet_Clik" HorizontalAlignment="Left" Margin="144,471,0,0" VerticalAlignment="Top"/>
+        <Button Content="Kaydet" Click="Kaydet_Clik" BorderBrush="White" Foreground="White" HorizontalAlignment="Left" Margin="144,471,0,0" VerticalAlignment="Top"/>
 
 
     </Grid>
